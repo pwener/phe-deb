@@ -5,7 +5,8 @@ import styled from "styled-components";
 
 interface LinkProps {
     name: string;
-    icon: IconDefinition
+    icon: IconDefinition;
+    url: string;
 }
 
 const Box = styled.div`
@@ -15,19 +16,18 @@ const Box = styled.div`
   padding: 0.5rem 0rem;
 `;
 
-const Line = styled.div`
+
+const Anchor = styled.a`
     color: #45644a;
 `
 
 const Link = (props: LinkProps) => {
     return (
-        <>
-            <Box>
-                <Line>
-                    <FontAwesomeIcon icon={props.icon} /> {props.name}
-                </Line>
-            </Box>
-        </>
+        <Box>
+            <Anchor href={props.url}>
+                <FontAwesomeIcon icon={props.icon} /> {props.name}
+            </Anchor>
+        </Box>
     )
 }
 

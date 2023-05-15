@@ -23,8 +23,16 @@ const IndexPage: React.FC<PageProps> = () => {
       <ThemeProvider theme={theme}>
         <Container>
             <Card />
-            <Link name="Lista de presentes" icon={faGift} />
-            <Link name="Confirmação de presença" icon={faEnvelope}/>
+            <Link
+              name="Listas de presentes"
+              icon={faGift}
+              url="/gifts"
+              />
+            <Link
+              name="Confirmação de presença"
+              icon={faEnvelope}
+              url="https://forms.gle/QHPUzRpxi5x9KLZp6"
+                />
         </Container>
         <GlobalStyles />
       </ThemeProvider>
@@ -34,4 +42,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <title>Phelipe & Débora</title>
