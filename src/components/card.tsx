@@ -20,10 +20,10 @@ const TitleContainer = styled.header`
 function Card() {
   return (
     <>
-        <TitleContainer>
-            <Flower src={flowersImg} alt="flowers" />
-            <Name src={namesImg} alt="names" />
-        </TitleContainer>
+      <TitleContainer>
+        <Flower src={flowersImg} alt="flowers" />
+        <Name src={namesImg} alt="names" />
+      </TitleContainer>
     </>
   );
 }
