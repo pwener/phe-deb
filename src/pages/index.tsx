@@ -20,15 +20,32 @@ const Container = styled.section`
 
 const InfoContainer = styled.section`
   text-align: center;
-  margin-top: 5rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 `
 
+const WarningContainer = styled.section`
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+`
+
+const LinksContainer = styled.section`
+  margin-top: 2rem;
+`
+
 const Info = styled.div`
-  color: #7a2c6c;
+  color: #E42F29;
   padding: 0.5rem 0rem;
+`;
+
+const Text = styled.div`
+  color: #45644A;
+  padding: 0.5rem 0rem;
+  max-width: 25rem;
 `;
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -37,17 +54,28 @@ const IndexPage: React.FC<PageProps> = () => {
       <ThemeProvider theme={theme}>
         <Container>
           <Card />
-          <Link
-            name="Listas de presentes"
-            icon={faGift}
-            url="/gifts"
-          />
-          <Link
-            name="Confirmação de presença"
-            icon={faEnvelope}
-            url="https://forms.gle/QHPUzRpxi5x9KLZp6"
-          />
           <InfoContainer>
+            <Text>
+              Querido(a) convidado(a), seja bem vindo(a) ao nosso site de casamento!
+              Deixamos aqui todas as informações importantes para que esse dia seja especial para você, assim como será para nós.
+            </Text>
+            <Text>
+              Esperamos você lá.
+            </Text>
+          </InfoContainer>
+          <LinksContainer>
+            <Link
+              name="Confirmação de presença"
+              icon={faEnvelope}
+              url="https://forms.gle/QHPUzRpxi5x9KLZp6"
+            />
+            <Link
+              name="Listas de presentes"
+              icon={faGift}
+              url="/gifts"
+            />
+          </LinksContainer>
+          <WarningContainer>
             <Info>
               <FontAwesomeIcon icon={faExclamationTriangle} /> Avisos
             </Info>
@@ -55,9 +83,9 @@ const IndexPage: React.FC<PageProps> = () => {
               - Traje Esporte fino
             </Info>
             <Info>
-               - A cerimônia será em piso de grama. Não aconselhamos usar salto fino.
+              - A cerimônia será em piso de grama. Não aconselhamos usar salto fino.
             </Info>
-          </InfoContainer>
+          </WarningContainer>
         </Container>
         <GlobalStyles />
       </ThemeProvider>
