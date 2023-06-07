@@ -77,7 +77,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </LinksContainer>
           <WarningContainer>
             <Info>
-              <FontAwesomeIcon icon={faExclamationTriangle} /> Avisos
+              <FontAwesomeIcon icon={faExclamationTriangle} width={20}/> Avisos
             </Info>
             <Info>
               - Traje Esporte fino

@@ -25,7 +25,7 @@ const Link = (props: LinkProps) => {
     return (
         <Box>
             <Anchor href={props.url}>
-                <FontAwesomeIcon icon={props.icon} /> {props.name}
+                <FontAwesomeIcon icon={props.icon} width={20}/> {props.name}
             </Anchor>
         </Box>
     )
